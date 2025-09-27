@@ -30,7 +30,11 @@ const Header: React.FC<HeaderProps> = ({ onMenuToggle }) => {
                     <NavLink href="#inicio">Início</NavLink>
                     <NavLink href="#particula">Partícula</NavLink>
                     <NavLink href="#onda">Onda</NavLink>
-                    <NavLink href="#modelo">Modelo Atômico</NavLink>
+                    <NavLink href="#optics">Óptica</NavLink>
+                    <NavLink href="#light-duality">Dualidade</NavLink>
+                    <NavLink href="#sommerfeld">Sommerfeld</NavLink>
+                    <NavLink href="#uncertainty">Heisenberg</NavLink>
+                    <NavLink href="#modelo">Schrodinger</NavLink>
                     <NavLink href="#experimentos">Experimentos</NavLink>
                     <NavLink href="#superposicao">Superposição</NavLink>
                     <NavLink href="#aplicacoes">Aplicações</NavLink>

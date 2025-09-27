@@ -17,6 +17,7 @@ This project explores the dual nature of electrons, showing how they can behave 
 - Quantum maze solving simulation
 - Electron microscopy comparison
 - 3D atomic models
+- Models of Sommerfeld and Schrodinger atoms with external links
 
 ## Key Experiments
 

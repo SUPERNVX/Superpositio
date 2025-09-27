@@ -6,6 +6,10 @@ import MobileMenu from './components/MobileMenu';
 import Hero from './components/Hero';
 import ParticleSection from './components/ParticleSection';
 import WaveSection from './components/WaveSection';
+import OpticsSection from './components/OpticsSection';
+import LightDualitySection from './components/LightDualitySection';
+import SommerfeldModelSection from './components/SommerfeldModelSection';
+import UncertaintyPrincipleSection from './components/UncertaintyPrincipleSection';
 import SchrodingerModelSection from './components/SchrodingerModelSection';
 import ExperimentsSection from './components/ExperimentsSection';
 import SuperpositionSection from './components/SuperpositionSection';
@@ -27,6 +31,10 @@ const App: React.FC = () => {
                 <Hero />
                 <ParticleSection />
                 <WaveSection />
+                <OpticsSection />
+                <LightDualitySection />
+                <SommerfeldModelSection />
+                <UncertaintyPrincipleSection />
                 <SchrodingerModelSection />
                 <ExperimentsSection />
                 <SuperpositionSection />

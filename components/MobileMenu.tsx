@@ -38,7 +38,11 @@ const MobileMenu: React.FC<MobileMenuProps> = ({ isOpen, onClose }) => {
                 <MobileNavLink href="#inicio" onClick={onClose}>Início</MobileNavLink>
                 <MobileNavLink href="#particula" onClick={onClose}>Partícula</MobileNavLink>
                 <MobileNavLink href="#onda" onClick={onClose}>Onda</MobileNavLink>
-                <MobileNavLink href="#modelo" onClick={onClose}>Modelo Atômico</MobileNavLink>
+                <MobileNavLink href="#optics" onClick={onClose}>Óptica</MobileNavLink>
+                <MobileNavLink href="#light-duality" onClick={onClose}>Dualidade</MobileNavLink>
+                <MobileNavLink href="#sommerfeld" onClick={onClose}>Sommerfeld</MobileNavLink>
+                <MobileNavLink href="#uncertainty" onClick={onClose}>Heisenberg</MobileNavLink>
+                <MobileNavLink href="#modelo" onClick={onClose}>Schrodinger</MobileNavLink>
                 <MobileNavLink href="#experimentos" onClick={onClose}>Experimentos</MobileNavLink>
                 <MobileNavLink href="#superposicao" onClick={onClose}>Superposição</MobileNavLink>
                 <MobileNavLink href="#aplicacoes" onClick={onClose}>Aplicações</MobileNavLink>
