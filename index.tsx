@@ -1,8 +1,10 @@
 
 import { StrictMode } from 'react';
 import { createRoot } from 'react-dom/client';
+import { I18nextProvider } from 'react-i18next';
 import App from './App';
 import ErrorBoundary from './components/ErrorBoundary';
+import i18n from './i18n/i18n';
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {
@@ -12,8 +14,10 @@ if (!rootElement) {
 const root = createRoot(rootElement);
 root.render(
   <StrictMode>
-    <ErrorBoundary>
-      <App />
-    </ErrorBoundary>
+    <I18nextProvider i18n={i18n}>
+      <ErrorBoundary>
+        <App />
+      </ErrorBoundary>
+    </I18nextProvider>
   </StrictMode>
 );

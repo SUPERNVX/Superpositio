@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ElectronDiffraction: React.FC = () => {
+    const { t } = useTranslation();
     const [isFiring, setIsFiring] = useState(false);
     const [showPattern, setShowPattern] = useState(false);
 
@@ -102,7 +104,7 @@ const ElectronDiffraction: React.FC = () => {
                     disabled={isFiring}
                     className="bg-quantum-accent hover:bg-cyan-500 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 disabled:bg-gray-500 disabled:cursor-not-allowed"
                 >
-                    {isFiring ? 'Disparando...' : 'Disparar Elétrons'}
+                    {isFiring ? t('electronDiffraction.firing') : t('electronDiffraction.fireElectrons')}
                 </button>
             </div>
         </div>

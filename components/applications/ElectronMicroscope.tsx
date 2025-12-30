@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const ElectronMicroscope: React.FC = () => {
+    const { t } = useTranslation();
     const [isScanning, setIsScanning] = useState(false);
     
     // Placeholder image URL - a complex structure like a virus or molecule
@@ -43,9 +45,9 @@ const ElectronMicroscope: React.FC = () => {
                     transform: translateX(calc(100% + 20px));
                 }
             `}</style>
-            <h3 className="text-lg font-bold mb-2 text-purple-400">Microscopia Eletrônica</h3>
+            <h3 className="text-lg font-bold mb-2 text-purple-400">{t('electronMicroscope.title')}</h3>
             <p className="text-sm text-gray-400 mb-4 max-w-xl">
-                O comprimento de onda de um elétron é muito menor que o da luz visível. Isso permite que microscópios eletrônicos obtenham uma resolução milhares de vezes maior.
+                {t('electronMicroscope.description')}
             </p>
             
             <div 
@@ -79,7 +81,7 @@ const ElectronMicroscope: React.FC = () => {
                 <div className="scan-line"></div>
 
                 <div className="absolute top-2 left-2 bg-black/50 text-white text-xs px-2 py-1 rounded z-10">
-                    {isScanning ? 'Visão: Microscópio Eletrônico' : 'Visão: Microscópio Óptico'}
+                    {isScanning ? t('electronMicroscope.electronView') : t('electronMicroscope.opticalView')}
                 </div>
             </div>
 
@@ -87,7 +89,7 @@ const ElectronMicroscope: React.FC = () => {
                 onClick={() => setIsScanning(!isScanning)}
                 className="bg-purple-500 hover:bg-purple-400 text-white font-bold py-2 px-6 rounded-full transition-all"
             >
-                {isScanning ? 'Desativar Feixe de Elétrons' : 'Ativar Feixe de Elétrons'}
+                {isScanning ? t('electronMicroscope.deactivateBeam') : t('electronMicroscope.activateBeam')}
             </button>
         </div>
     );

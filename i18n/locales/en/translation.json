@@ -1,0 +1,375 @@
+{
+  "common": {
+    "title": "Wave-Particle Duality",
+    "explore": "Explore",
+    "experiments": "Experiments",
+    "applications": "Applications",
+    "controls": "Controls",
+    "running": "Running...",
+    "start": "Start",
+    "reset": "Reset"
+  },
+  "header": {
+    "home": "Home",
+    "particle": "Particle",
+    "wave": "Wave",
+    "optics": "Optics",
+    "lightDuality": "Duality",
+    "sommerfeld": "Sommerfeld",
+    "heisenberg": "Heisenberg",
+    "schrodinger": "Schrodinger",
+    "experiments": "Experiments",
+    "superposition": "Superposition",
+    "applications": "Applications"
+  },
+  "hero": {
+    "title": "The <0>Duality</0> of the Electron",
+    "subtitle": "Discover how the electron can behave as both particle and wave, challenging our classical understanding of physics."
+  },
+  "doubleSlitExperiment": {
+    "observer": "Observer",
+    "waveBehavior": "Wave Behavior",
+    "waveExplanation": "Without an observer, electrons create an interference pattern, acting like waves.",
+    "particleBehavior": "Particle Behavior",
+    "particleExplanation": "With an observer, the pattern disappears. Electrons act like particles, forming two lines."
+  },
+  "sections": {
+    "particle": {
+      "title": "Behavior as <0>Particle</0>"
+    },
+    "wave": {
+      "title": "Behavior as <0>Wave</0>"
+    },
+    "optics": {
+      "title": "Fundamentals of <0>Optics</0>"
+    },
+    "lightDuality": {
+      "title": "Wave-Particle Duality of <0>Light</0>"
+    },
+    "conclusion": {
+      "title": "The Beauty of <0>Duality</0>"
+    },
+    "experiments": {
+      "title": "<0>Fundamental</0> Experiments"
+    },
+    "applications": {
+      "title": "Applications of <0>Superposition</0>"
+    }
+  },
+  "footer": {
+    "description": "Exploring the mysteries of the quantum world and its applications in modern technology.",
+    "resources": "Resources",
+    "documentation": "Documentation",
+    "atomicModels": "3D Atomic Models",
+    "copyright": "&copy; 2025 Wave-Particle Duality Presentation. Created for educational purposes."
+  },
+  "particleSection": {
+    "characteristics": "Particle Characteristics",
+    "definedLocation": {
+      "title": "Defined location",
+      "description": "The electron can be detected at a specific point in space."
+    },
+    "massCharge": {
+      "title": "Mass and charge",
+      "description": "Has a mass of 9.11 × 10⁻³¹ kg and an electric charge of -1.6 × 10⁻¹⁹ C."
+    },
+    "definedPath": {
+      "title": "Defined trajectory",
+      "description": "In certain experiments, follows predictable paths."
+    },
+    "collisions": {
+      "title": "Collisions",
+      "description": "Can collide with other particles, transferring energy and momentum."
+    },
+    "particle": "PARTICLE"
+  },
+  "waveSection": {
+    "characteristics": "Wave Characteristics",
+    "wavelength": {
+      "title": "Wavelength",
+      "description": "Associated with momentum (λ = h/p)."
+    },
+    "frequency": {
+      "title": "Frequency",
+      "description": "Related to electron energy (E = hf)."
+    },
+    "diffraction": {
+      "title": "Diffraction",
+      "description": "Can spread when passing through narrow slits."
+    },
+    "interference": {
+      "title": "Interference",
+      "description": "Can overlap with other waves, creating reinforcement and cancellation patterns."
+    },
+    "wave": "WAVE"
+  },
+  "experimentsSection": {
+    "title": "Experiments <0>Fundamental</0>",
+    "description": "Classic experiments that demonstrate the wave-particle duality of the electron",
+    "photoelectric": {
+      "title": "Photoelectric Effect",
+      "description": "Demonstration that light behaves as a particle (photons) when ejecting electrons from a metal surface. Change the light frequency to see the result."
+    },
+    "electronDiffraction": {
+      "title": "Electron Diffraction",
+      "description": "Davisson-Germer experiment showing that electron beams produce diffraction patterns like waves when passing through a crystal."
+    },
+    "doubleSlit": {
+      "title": "Double Slit Experiment",
+      "description": "When electrons pass through two slits, they create an interference pattern (wave). But when observed, the pattern disappears and they act as particles. Use the switch to see the change."
+    }
+  },
+  "conclusion": {
+    "paragraph1": "The wave-particle duality of the electron is one of the most fascinating concepts in modern physics. It shows us that reality at the quantum scale does not behave as our classical intuition suggests.",
+    "paragraph2": "The electron is not \"just\" a particle or \"just\" a wave - it is both, depending on how we observe it. This discovery revolutionized our understanding of the universe and paved the way for innovative technologies."
+  },
+  "applicationsSection": {
+    "title": "Applications of <0>Superposition</0>",
+    "description": "Technologies that explore the quantum properties of matter. Click to interact.",
+    "quantumComputing": "Quantum Computing",
+    "semiconductors": "Semiconductors",
+    "batteries": "Lithium Batteries"
+  },
+  "lightWaveExperiment": {
+    "air": "Air (n=1.0)",
+    "glass": "Glass (n=1.5)",
+    "incidentRay": "Incident Ray",
+    "refractedRay": "Refracted Ray",
+    "light": "Light",
+    "singleSlit": "Single Slit",
+    "diffractionPattern": "Diffraction Pattern",
+    "polarizer": "Polarizer",
+    "polarizedLight": "Polarized Light",
+    "unpolarizedLight": "Unpolarized Light",
+    "refraction": "Refraction",
+    "diffraction": "Diffraction",
+    "polarization": "Polarization"
+  },
+  "schrodingersCat": {
+    "status": "Cat Status",
+    "instruction": "Drag the box to rotate.",
+    "atom": "Atom",
+    "poison": "Poison",
+    "mechanism": "Mechanism",
+    "observe": "Observe",
+    "reset": "Reset",
+    "initialState": "Alive AND Dead",
+    "observing": "...",
+    "alive": "Alive!",
+    "dead": "Dead..."
+  },
+  "lightDualitySection": {
+    "description": "How light exhibits properties of both waves and particles",
+    "wave": {
+      "title": "Light as Wave",
+      "description": "Light demonstrates wave properties in various phenomena, such as interference, diffraction and polarization. These properties can only be explained if we consider light as an electromagnetic wave.",
+      "interference": {
+        "title": "Interference",
+        "description": "Patterns of reinforcement and cancellation when light waves overlap"
+      },
+      "diffraction": {
+        "title": "Diffraction",
+        "description": "Ability of light to bend around obstacles and spread through slits"
+      },
+      "polarization": {
+        "title": "Polarization",
+        "description": "Light waves vibrating in specific directions"
+      }
+    },
+    "particle": {
+      "title": "Light as Particle",
+      "description": "Light also behaves as particles called photons. This behavior is evident in phenomena such as the photoelectric effect and Compton effect, where light interacts with matter in discrete units of energy.",
+      "photons": {
+        "title": "Photons",
+        "description": "Discrete packets of energy with no mass"
+      },
+      "energy": {
+        "title": "Energy",
+        "description": "E = hf, where h is Planck's constant and f is frequency"
+      },
+      "momentum": {
+        "title": "Momentum",
+        "description": "p = h/λ, even with zero mass, photons have momentum"
+      }
+    }
+  },
+  "opticsSection": {
+    "description": "Understanding the wavelength and what the human eye is able to perceive",
+    "wavelength": {
+      "title": "The Wavelength of Light",
+      "description": "Visible light is a form of electromagnetic radiation that propagates in waves. Each color we see corresponds to a specific wavelength. The visible spectrum ranges approximately from 380 nanometers (violet) to 750 nanometers (red).",
+      "wavelength": {
+        "title": "Wavelength (λ)",
+        "description": "Distance between two consecutive wave peaks"
+      },
+      "frequency": {
+        "title": "Frequency (f)",
+        "description": "Number of cycles per second (measured in Hertz)"
+      },
+      "relation": {
+        "title": "Relation",
+        "description": "c = λ × f, where c is the speed of light (3×10⁸ m/s)"
+      }
+    },
+    "eye": {
+      "title": "What the Eye Perceives",
+      "description": "The human eye has cells called cones that respond to different wavelengths of visible light. There are three main types of cones, sensitive to red light (L), green (M) and blue (S).",
+      "conesS": {
+        "title": "S Cones",
+        "description": "Sensitive to blue (400-500 nm)"
+      },
+      "conesM": {
+        "title": "M Cones",
+        "description": "Sensitive to green (500-600 nm)"
+      },
+      "conesL": {
+        "title": "L Cones",
+        "description": "Sensitive to red (600-700 nm)"
+      }
+    },
+    "spectrum": {
+      "title": "Visible Electromagnetic Spectrum",
+      "range1": "380nm",
+      "range2": "500nm",
+      "range3": "600nm",
+      "range4": "750nm"
+    }
+  },
+  "uncertaintySection": {
+    "title": "The <0>Uncertainty</0> Principle of Heisenberg",
+    "description": "The fundamental impossibility of simultaneously knowing the position and momentum of a particle",
+    "action": {
+      "title": "Uncertainty in Action",
+      "description": "Demonstration of how attempting to locate a particle (red dot) increases uncertainty in its momentum"
+    },
+    "simple": {
+      "title": "The Principle in Simple Terms",
+      "description": "In 1927, Werner Heisenberg formulated a fundamental principle of quantum mechanics: it is impossible to simultaneously know the exact position and momentum (mass × velocity) of a particle with perfect precision.",
+      "formula": "Where: Δx = uncertainty in position, Δp = uncertainty in momentum, ℏ = reduced Planck constant"
+    },
+    "importance": {
+      "title": "Why This Matters?",
+      "description": "This principle is not a limitation of our instruments, but a fundamental characteristic of nature at the quantum scale. It means that quantum reality is intrinsically probabilistic, not deterministic.",
+      "limit": {
+        "title": "Fundamental limit",
+        "description": "It is not possible to overcome this limit with advanced technology"
+      },
+      "observation": {
+        "title": "Relationship with observation",
+        "description": "The act of observing changes the state of the quantum system"
+      },
+      "foundation": {
+        "title": "Foundation for other principles",
+        "description": "Fundamental to understanding Schrödinger's probability cloud"
+      }
+    }
+  },
+  "sommerfeldSection": {
+    "title": "Atomic Model of <0>Sommerfeld</0>",
+    "description": "Extension of Bohr's model with elliptical orbits and additional quantum numbers",
+    "enhancement": {
+      "title": "Improvement of Bohr's Model",
+      "description": "Arnold Sommerfeld improved the atomic model of Bohr in 1916, introducing the idea of elliptical orbits in addition to circular ones. This model better explained the spectrum of more complex elements and introduced concepts that would be fundamental to quantum mechanics.",
+      "elliptical": {
+        "title": "Elliptical orbits",
+        "description": "In addition to Bohr's circular orbits, Sommerfeld introduced elliptical orbits"
+      },
+      "azimuthal": {
+        "title": "Azimuthal quantum number",
+        "description": "Describes the shape of the orbit (s, p, d, f)"
+      },
+      "fine": {
+        "title": "Fine structure",
+        "description": "Explanation for the splitting of spectral lines into multiple nearby components"
+      }
+    },
+    "quantum": {
+      "title": "Quantum Numbers in Action",
+      "description": "Sommerfeld's model introduced quantum numbers that describe specific properties of each orbit:",
+      "principal": {
+        "title": "n (principal)",
+        "description": "Defines the size and energy of the orbit"
+      },
+      "azimuthal": {
+        "title": "l (azimuthal)",
+        "description": "Defines the shape of the orbit"
+      },
+      "magnetic": {
+        "title": "m (magnetic)",
+        "description": "Defines the spatial orientation of the orbit"
+      }
+    },
+    "labels": {
+      "circular": "Circular orbital",
+      "elliptical": "Elliptical orbital"
+    }
+  },
+  "schrodingerSection": {
+    "title": "The Atomic Model of <0>Schrödinger</0>",
+    "description": "Abandoning fixed orbits for a sea of possibilities.",
+    "cloud": {
+      "title": "The Probability Cloud",
+      "description": "Unlike the Bohr model with defined orbits, the Schrödinger model describes the electron as a \"cloud\". This cloud does not represent the electron spread out, but rather the **probability** of finding it at any point around the nucleus.",
+      "density": "Where the cloud is denser, the probability of finding the electron is greater.",
+      "uncertainty": "Heisenberg's Uncertainty Principle states that we cannot simultaneously know the exact position and momentum of the electron.",
+      "measurement": "The act of measuring \"forces\" the electron to assume a position, collapsing the probability cloud."
+    }
+  },
+  "superpositionSection": {
+    "title": "Superposition and Schrödinger's <0>Cat</0>",
+    "description": "A quantum system can be in multiple states at the same time — until it is measured.",
+    "paradox": {
+      "title": "The Quantum Paradox",
+      "description": "Superposition is a fundamental principle of quantum mechanics. It states that, just as waves can overlap, a quantum particle (such as an electron) can exist in a combination of all its possible states simultaneously.",
+      "illustration": "To illustrate how strange this concept would be in our macroscopic world, Erwin Schrödinger proposed a famous thought experiment in 1935.",
+      "explanation": "Inside a sealed box, a cat is placed next to a vial of poison that can be released by a radioactive atom. If the atom decays (a quantum event), the poison is released. Since the atom is in a superposition of \"decayed\" and \"not decayed\", the cat, consequently, would be in the bizarre superposition of \"alive\" and \"dead\" until the box is opened and the system observed."
+    }
+  },
+  "photoelectricEffect": {
+    "frequency": "Light Frequency",
+    "low": "Low",
+    "high": "High"
+  },
+  "electronDiffraction": {
+    "firing": "Firing...",
+    "fireElectrons": "Fire Electrons"
+  },
+  "quantumMaze": {
+    "classicalComputer": "Classical Computer",
+    "classicalDescription": "Explores one path at a time, testing and backtracking from dead ends.",
+    "quantumComputer": "Quantum Computer",
+    "quantumDescription": "Thanks to superposition, explores all paths simultaneously to find the solution.",
+    "time": "Time",
+    "ms": "ms",
+    "distance": "Distance",
+    "squares": "squares",
+    "solving": "Solving...",
+    "solveMaze": "Solve Maze",
+    "reset": "Reset",
+    "enlargeMaze": "Enlarge Maze",
+    "shrinkMaze": "Shrink Maze"
+  },
+  "electronMicroscope": {
+    "title": "Electron Microscopy",
+    "description": "The wavelength of an electron is much smaller than visible light. This allows electron microscopes to achieve resolution thousands of times greater.",
+    "electronView": "View: Electron Microscope",
+    "opticalView": "View: Optical Microscope",
+    "deactivateBeam": "Deactivate Electron Beam",
+    "activateBeam": "Activate Electron Beam"
+  },
+  "semiconductorTransistor": {
+    "title": "Semiconductor Transistor",
+    "description": "The quantum behavior of electrons in semiconductor materials allows precise control of their flow, creating a switch (transistor) that is the foundation of all electronics.",
+    "on": "On (Flow Allowed)",
+    "off": "Off (Flow Blocked)"
+  },
+  "quantumTunnelingBattery": {
+    "title": "Quantum Tunneling in Batteries",
+    "description": "In classical physics, an electron cannot pass through an energy barrier without sufficient energy. Quantum mechanically, due to its wave nature, there is a probability it can \"tunnel\" through the barrier.",
+    "anode": "ANODE (-)",
+    "cathode": "CATHODE (+)",
+    "barrier": "Barrier (Electrolyte)",
+    "classicalView": "Classical View",
+    "quantumView": "Quantum View"
+  }
+}

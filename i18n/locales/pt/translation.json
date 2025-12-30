@@ -1,0 +1,375 @@
+{
+  "common": {
+    "title": "Dualidade Onda-Partícula",
+    "explore": "Explorar",
+    "experiments": "Experimentos",
+    "applications": "Aplicações",
+    "controls": "Controles",
+    "running": "Rodando...",
+    "start": "Iniciar",
+    "reset": "Resetar"
+  },
+  "header": {
+    "home": "Início",
+    "particle": "Partícula",
+    "wave": "Onda",
+    "optics": "Óptica",
+    "lightDuality": "Dualidade",
+    "sommerfeld": "Sommerfeld",
+    "heisenberg": "Heisenberg",
+    "schrodinger": "Schrodinger",
+    "experiments": "Experimentos",
+    "superposition": "Superposição",
+    "applications": "Aplicações"
+  },
+  "hero": {
+    "title": "A <0>Dualidade</0> do Elétron",
+    "subtitle": "Descubra como o elétron pode se comportar como partícula e onda, desafiando nossa compreensão clássica da física."
+  },
+  "doubleSlitExperiment": {
+    "observer": "Observador",
+    "waveBehavior": "Comportamento Ondulatório",
+    "waveExplanation": "Sem observador, os elétrons criam um padrão de interferência, agindo como ondas.",
+    "particleBehavior": "Comportamento Particulado",
+    "particleExplanation": "Com um observador, o padrão some. Os elétrons agem como partículas, formando duas linhas."
+  },
+  "sections": {
+    "particle": {
+      "title": "Comportamento como <0>Partícula</0>"
+    },
+    "wave": {
+      "title": "Comportamento como <0>Onda</0>"
+    },
+    "optics": {
+      "title": "Fundamentos de <0>Óptica</0>"
+    },
+    "lightDuality": {
+      "title": "Dualidade Onda-Partícula da <0>Luz</0>"
+    },
+    "conclusion": {
+      "title": "A Beleza da <0>Dualidade</0>"
+    },
+    "experiments": {
+      "title": "Experimentos <0>Fundamentais</0>"
+    },
+    "applications": {
+      "title": "Aplicações da <0>Superposição</0>"
+    }
+  },
+  "footer": {
+    "description": "Explorando os mistérios do mundo quântico e suas aplicações na tecnologia moderna.",
+    "resources": "Recursos",
+    "documentation": "Documentação",
+    "atomicModels": "Modelos atômicos 3D",
+    "copyright": "&copy; 2025 Apresentação sobre Dualidade Onda-Partícula. Criado para fins educacionais."
+  },
+  "particleSection": {
+    "characteristics": "Características da Partícula",
+    "definedLocation": {
+      "title": "Localização definida",
+      "description": "O elétron pode ser detectado em um ponto específico do espaço."
+    },
+    "massCharge": {
+      "title": "Massa e carga",
+      "description": "Possui massa de 9,11 × 10⁻³¹ kg e carga elétrica de -1,6 × 10⁻¹⁹ C."
+    },
+    "definedPath": {
+      "title": "Trajetória definida",
+      "description": "Em certos experimentos, segue caminhos previsíveis."
+    },
+    "collisions": {
+      "title": "Colisões",
+      "description": "Pode colidir com outras partículas, transferindo energia e momento."
+    },
+    "particle": "PARTÍCULA"
+  },
+  "waveSection": {
+    "characteristics": "Características da Onda",
+    "wavelength": {
+      "title": "Comprimento de onda",
+      "description": "Associado à quantidade de movimento (λ = h/p)."
+    },
+    "frequency": {
+      "title": "Frequência",
+      "description": "Relacionada à energia do elétron (E = hf)."
+    },
+    "diffraction": {
+      "title": "Difração",
+      "description": "Pode se espalhar ao passar por fendas estreitas."
+    },
+    "interference": {
+      "title": "Interferência",
+      "description": "Pode se sobrepor a outras ondas, criando padrões de reforço e cancelamento."
+    },
+    "wave": "ONDA"
+  },
+  "experimentsSection": {
+    "title": "Experimentos <0>Fundamentais</0>",
+    "description": "Experimentos clássicos que demonstram a dualidade onda-partícula do elétron",
+    "photoelectric": {
+      "title": "Efeito Fotoelétrico",
+      "description": "Demonstração de que a luz se comporta como partícula (fótons) ao ejetar elétrons de uma superfície metálica. Altere a frequência da luz para ver o resultado."
+    },
+    "electronDiffraction": {
+      "title": "Difração de Elétrons",
+      "description": "Experimento de Davisson-Germer mostrando que feixes de elétrons produzem padrões de difração como ondas ao passar por um cristal."
+    },
+    "doubleSlit": {
+      "title": "Experimento da Dupla Fenda",
+      "description": "Quando elétrons passam por duas fendas, criam um padrão de interferência (onda). Mas ao observá-los, o padrão desaparece e eles agem como partículas. Use o interruptor para ver a mudança."
+    }
+  },
+  "conclusion": {
+    "paragraph1": "A dualidade onda-partícula do elétron é um dos conceitos mais fascinantes da física moderna. Ela nos mostra que a realidade em escala quântica não se comporta como nossa intuição clássica sugere.",
+    "paragraph2": "O elétron não é \"apenas\" uma partícula ou \"apenas\" uma onda - ele é ambos, dependendo de como o observamos. Esta descoberta revolucionou nossa compreensão do universo e abriu caminho para tecnologias inovadoras."
+  },
+  "applicationsSection": {
+    "title": "Aplicações da <0>Superposição</0>",
+    "description": "Tecnologias que exploram as propriedades quânticas da matéria. Clique para interagir.",
+    "quantumComputing": "Computação Quântica",
+    "semiconductors": "Semicondutores",
+    "batteries": "Baterias de Lítio"
+  },
+  "lightWaveExperiment": {
+    "air": "Ar (n=1.0)",
+    "glass": "Vidro (n=1.5)",
+    "incidentRay": "Raio incidente",
+    "refractedRay": "Raio refratado",
+    "light": "Luz",
+    "singleSlit": "Fenda simples",
+    "diffractionPattern": "Padrão de difração",
+    "polarizer": "Polarizador",
+    "polarizedLight": "Luz polarizada",
+    "unpolarizedLight": "Luz não polarizada",
+    "refraction": "Refração",
+    "diffraction": "Difração",
+    "polarization": "Polarização"
+  },
+  "schrodingersCat": {
+    "status": "Estado do Gato",
+    "instruction": "Arraste a caixa para girar.",
+    "atom": "Átomo",
+    "poison": "Veneno",
+    "mechanism": "Mecanismo",
+    "observe": "Observar",
+    "reset": "Resetar",
+    "initialState": "Vivo E Morto",
+    "observing": "...",
+    "alive": "Vivo!",
+    "dead": "Morto..."
+  },
+  "lightDualitySection": {
+    "description": "Como a luz exibe propriedades tanto de ondas quanto de partículas",
+    "wave": {
+      "title": "Luz como Onda",
+      "description": "A luz demonstra propriedades de onda em diversos fenômenos, como interferência, difração e polarização. Essas propriedades só podem ser explicadas se considerarmos a luz como uma onda eletromagnética.",
+      "interference": {
+        "title": "Interferência",
+        "description": "Padrões de reforço e cancelamento quando ondas de luz se sobrepõem"
+      },
+      "diffraction": {
+        "title": "Difração",
+        "description": "Capacidade da luz de contornar obstáculos e se espalhar por fendas"
+      },
+      "polarization": {
+        "title": "Polarização",
+        "description": "Ondas de luz vibrando em direções específicas"
+      }
+    },
+    "particle": {
+      "title": "Luz como Partícula",
+      "description": "A luz também se comporta como partículas chamadas fótons. Este comportamento é evidente em fenômenos como o efeito fotoelétrico e o efeito Compton, onde a luz interage com matéria em unidades discretas de energia.",
+      "photons": {
+        "title": "Fótons",
+        "description": "Pacotes discretos de energia sem massa"
+      },
+      "energy": {
+        "title": "Energia",
+        "description": "E = hf, onde h é a constante de Planck e f é a frequência"
+      },
+      "momentum": {
+        "title": "Momento",
+        "description": "p = h/λ, mesmo tendo massa zero, fótons possuem momento"
+      }
+    }
+  },
+  "opticsSection": {
+    "description": "Compreendendo o comprimento de onda e o que o olho humano é capaz de perceber",
+    "wavelength": {
+      "title": "O Comprimento de Onda da Luz",
+      "description": "A luz visível é uma forma de radiação eletromagnética que se propaga em ondas. Cada cor que vemos corresponde a um comprimento de onda específico. O espectro visível varia aproximadamente de 380 nanômetros (violeta) a 750 nanômetros (vermelho).",
+      "wavelength": {
+        "title": "Comprimento de onda (λ)",
+        "description": "Distância entre dois picos consecutivos da onda"
+      },
+      "frequency": {
+        "title": "Frequência (f)",
+        "description": "Número de ciclos por segundo (medido em Hertz)"
+      },
+      "relation": {
+        "title": "Relação",
+        "description": "c = λ × f, onde c é a velocidade da luz (3×10⁸ m/s)"
+      }
+    },
+    "eye": {
+      "title": "O Que o Olho Percebe",
+      "description": "O olho humano tem células chamadas cones que respondem a diferentes comprimentos de onda da luz visível. Existem três tipos principais de cones, sensíveis à luz vermelha (L), verde (M) e azul (S).",
+      "conesS": {
+        "title": "Cones S",
+        "description": "Sensíveis ao azul (400-500 nm)"
+      },
+      "conesM": {
+        "title": "Cones M",
+        "description": "Sensíveis ao verde (500-600 nm)"
+      },
+      "conesL": {
+        "title": "Cones L",
+        "description": "Sensíveis ao vermelho (600-700 nm)"
+      }
+    },
+    "spectrum": {
+      "title": "Espectro Eletromagnético Visível",
+      "range1": "380nm",
+      "range2": "500nm",
+      "range3": "600nm",
+      "range4": "750nm"
+    }
+  },
+  "uncertaintySection": {
+    "title": "Princípio da <0>Incerteza</0> de Heisenberg",
+    "description": "A impossibilidade fundamental de conhecer simultaneamente a posição e o momento de uma partícula",
+    "action": {
+      "title": "Incerteza em Ação",
+      "description": "Demonstração de como a tentativa de localizar uma partícula (ponto vermelho) aumenta a incerteza no seu momento"
+    },
+    "simple": {
+      "title": "O Princípio em Termos Simples",
+      "description": "Em 1927, Werner Heisenberg formulou um princípio fundamental da mecânica quântica: é impossível conhecer simultaneamente a posição exata e o momento (massa × velocidade) exato de uma partícula com perfeita precisão.",
+      "formula": "Onde: Δx = incerteza na posição, Δp = incerteza no momento, ℏ = constante de Planck reduzida"
+    },
+    "importance": {
+      "title": "Por que Isso Importa?",
+      "description": "Este princípio não é uma limitação de nossos instrumentos, mas uma característica fundamental da natureza em escala quântica. Ele significa que a realidade quântica é intrinsecamente probabilística, não determinística.",
+      "limit": {
+        "title": "Limite fundamental",
+        "description": "Não é possível superar este limite com tecnologia avançada"
+      },
+      "observation": {
+        "title": "Relação com observação",
+        "description": "O ato de observar altera o estado do sistema quântico"
+      },
+      "foundation": {
+        "title": "Base para outros princípios",
+        "description": "Fundamental para entender a nuvem de probabilidade de Schrödinger"
+      }
+    }
+  },
+  "sommerfeldSection": {
+    "title": "Modelo Atômico de <0>Sommerfeld</0>",
+    "description": "Extensão do modelo de Bohr com órbitas elípticas e números quânticos adicionais",
+    "enhancement": {
+      "title": "Aprimoramento do Modelo de Bohr",
+      "description": "Arnold Sommerfeld aprimorou o modelo atômico de Bohr em 1916, introduzindo a ideia de órbitas elípticas além das circulares. Este modelo explicava melhor o espectro de elementos mais complexos e introduzia conceitos que seriam fundamentais para a mecânica quântica.",
+      "elliptical": {
+        "title": "Órbitas elípticas",
+        "description": "Além das órbitas circulares de Bohr, Sommerfeld introduziu órbitas elípticas"
+      },
+      "azimuthal": {
+        "title": "Número quântico azimutal",
+        "description": "Descreve a forma da órbita (s, p, d, f)"
+      },
+      "fine": {
+        "title": "Estrutura fina",
+        "description": "Explicação para a divisão de linhas espectrais em múltiplas componentes próximas"
+      }
+    },
+    "quantum": {
+      "title": "Números Quânticos em Ação",
+      "description": "O modelo de Sommerfeld introduziu números quânticos que descrevem propriedades específicas de cada órbita:",
+      "principal": {
+        "title": "n (principal)",
+        "description": "Define o tamanho e energia da órbita"
+      },
+      "azimuthal": {
+        "title": "l (azimutal)",
+        "description": "Define a forma da órbita"
+      },
+      "magnetic": {
+        "title": "m (magnético)",
+        "description": "Define a orientação espacial da órbita"
+      }
+    },
+    "labels": {
+      "circular": "Orbital circular",
+      "elliptical": "Orbital elíptico"
+    }
+  },
+  "schrodingerSection": {
+    "title": "O Modelo Atômico de <0>Schrödinger</0>",
+    "description": "Abandonando órbitas fixas por um mar de possibilidades.",
+    "cloud": {
+      "title": "A Nuvem de Probabilidades",
+      "description": "Diferente do modelo de Bohr com órbitas definidas, o modelo de Schrödinger descreve o elétron como uma \"nuvem\". Esta nuvem não representa o elétron espalhado, mas sim a **probabilidade** de encontrá-lo em qualquer ponto ao redor do núcleo.",
+      "density": "Onde a nuvem é mais densa, a probabilidade de encontrar o elétron é maior.",
+      "uncertainty": "O Princípio da Incerteza de Heisenberg afirma que não podemos saber simultaneamente a posição exata e o momento do elétron.",
+      "measurement": "O ato de medir \"força\" o elétron a assumir uma posição, colapsando a nuvem de probabilidade."
+    }
+  },
+  "superpositionSection": {
+    "title": "Superposição e o Gato de <0>Schrödinger</0>",
+    "description": "Um sistema quântico pode estar em múltiplos estados ao mesmo tempo — até que seja medido.",
+    "paradox": {
+      "title": "O Paradoxo Quântico",
+      "description": "A superposição é um princípio fundamental da mecânica quântica. Ele afirma que, assim como as ondas podem se sobrepor, uma partícula quântica (como um elétron) pode existir em uma combinação de todos os seus estados possíveis simultaneamente.",
+      "illustration": "Para ilustrar o quão estranho este conceito seria no nosso mundo macroscópico, Erwin Schrödinger propôs um famoso experimento mental em 1935.",
+      "explanation": "Dentro de uma caixa selada, um gato está junto a um frasco de veneno que pode ser liberado por um átomo radioativo. Se o átomo decai (um evento quântico), o veneno é liberado. Como o átomo está em uma superposição de \"decaído\" e \"não decaído\", o gato, por consequência, estaria na bizarra superposição de \"vivo\" e \"morto\" até que a caixa seja aberta e o sistema observado."
+    }
+  },
+  "photoelectricEffect": {
+    "frequency": "Frequência da Luz",
+    "low": "Baixa",
+    "high": "Alta"
+  },
+  "electronDiffraction": {
+    "firing": "Disparando...",
+    "fireElectrons": "Disparar Elétrons"
+  },
+  "quantumMaze": {
+    "classicalComputer": "Computador Clássico",
+    "classicalDescription": "Explora um caminho de cada vez, testando e voltando em becos sem saída.",
+    "quantumComputer": "Computador Quântico",
+    "quantumDescription": "Graças à superposição, explora todos os caminhos simultaneamente para encontrar a solução.",
+    "time": "Tempo",
+    "ms": "ms",
+    "distance": "Distância",
+    "squares": "quadrados",
+    "solving": "Resolvendo...",
+    "solveMaze": "Resolver Labirinto",
+    "reset": "Resetar",
+    "enlargeMaze": "Aumentar Labirinto",
+    "shrinkMaze": "Diminuir Labirinto"
+  },
+  "electronMicroscope": {
+    "title": "Microscopia Eletrônica",
+    "description": "O comprimento de onda de um elétron é muito menor que o da luz visível. Isso permite que microscópios eletrônicos obtenham uma resolução milhares de vezes maior.",
+    "electronView": "Visão: Microscópio Eletrônico",
+    "opticalView": "Visão: Microscópio Óptico",
+    "deactivateBeam": "Desativar Feixe de Elétrons",
+    "activateBeam": "Ativar Feixe de Elétrons"
+  },
+  "semiconductorTransistor": {
+    "title": "Transistor Semicondutor",
+    "description": "O comportamento quântico dos elétrons em materiais semicondutores permite controlar seu fluxo com precisão, criando um interruptor (transistor) que é a base de todos os eletrônicos.",
+    "on": "Ligado (Fluxo Permitido)",
+    "off": "Desligado (Fluxo Bloqueado)"
+  },
+  "quantumTunnelingBattery": {
+    "title": "Tunelamento Quântico em Baterias",
+    "description": "Na física clássica, um elétron não pode passar por uma barreira de energia sem ter energia suficiente. Quanticamente, devido à sua natureza de onda, existe uma probabilidade de ele \"tunelar\" através da barreira.",
+    "anode": "ÂNODO (-)",
+    "cathode": "CÁTODO (+)",
+    "barrier": "Barreira (Eletrólito)",
+    "classicalView": "Visão Clássica",
+    "quantumView": "Visão Quântica"
+  }
+}

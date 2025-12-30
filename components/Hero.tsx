@@ -1,9 +1,11 @@
 
 import React, { memo } from 'react';
+import { useTranslation, Trans } from 'react-i18next';
 import Button from '../components/ui/Button';
 import useScrollToSection from '../hooks/useScrollToSection';
 
 const Hero: React.FC = () => {
+    const { t } = useTranslation();
     const { scrollToSection } = useScrollToSection();
 
     return (
@@ -12,26 +14,26 @@ const Hero: React.FC = () => {
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     <div className="text-center md:text-left">
                         <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
-                            A <span className="text-quantum-primary">Dualidade</span> do Elétron
+                            <Trans i18nKey="hero.title" components={{ 0: <span className="text-quantum-primary">Dualidade</span> }} />
                         </h1>
                         <p className="text-xl text-gray-300 mb-8 leading-relaxed">
-                            Descubra como o elétron pode se comportar como partícula e onda, desafiando nossa compreensão clássica da física.
+                            {t('hero.subtitle')}
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
-                            <Button 
-                                variant="primary" 
-                                size="lg" 
+                            <Button
+                                variant="primary"
+                                size="lg"
                                 onClick={(e) => scrollToSection(e, '#particula')}
                                 className="transform hover:scale-105"
                             >
-                                Explorar
+                                {t('common.explore')}
                             </Button>
-                            <Button 
-                                variant="outline" 
-                                size="lg" 
+                            <Button
+                                variant="outline"
+                                size="lg"
                                 onClick={(e) => scrollToSection(e, '#experimentos')}
                             >
-                                Experimentos
+                                {t('common.experiments')}
                             </Button>
                         </div>
                     </div>
@@ -41,7 +43,7 @@ const Hero: React.FC = () => {
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="w-16 h-16 bg-quantum-accent rounded-full glow"></div>
                             </div>
-                            
+
                             {/* Órbitas */}
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="w-40 h-40 border border-quantum-secondary/30 rounded-full"></div>
@@ -49,7 +51,7 @@ const Hero: React.FC = () => {
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="w-60 h-60 border border-quantum-secondary/20 rounded-full"></div>
                             </div>
-                            
+
                             {/* Elétrons */}
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="electron-orbit">
@@ -61,7 +63,7 @@ const Hero: React.FC = () => {
                                     <div className="w-6 h-6 bg-quantum-primary rounded-full glow"></div>
                                 </div>
                             </div>
-                            
+
                             {/* Ondas */}
                             <div className="absolute inset-0 flex items-center justify-center">
                                 <div className="wave-animation">

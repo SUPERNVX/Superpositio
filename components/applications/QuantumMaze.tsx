@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 // --- MAZE CONFIGURATIONS ---
 
@@ -103,6 +104,7 @@ const MazeGrid = ({ state, config }: { state: any; config: any }) => {
 };
 
 const QuantumMaze: React.FC = () => {
+    const { t } = useTranslation();
     const [mazeSize, setMazeSize] = useState<'small' | 'large'>('small');
     const [isSolving, setIsSolving] = useState(false);
     const [classicalPath, setClassicalPath] = useState<{ row: number, col: number }[]>([]);
@@ -263,37 +265,37 @@ const QuantumMaze: React.FC = () => {
         <div className="flex flex-col items-center">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-6xl">
                 <div className="text-center">
-                    <h3 className="text-lg font-bold mb-2 text-quantum-primary">Computador Clássico</h3>
-                    <p className="text-xs text-gray-400 mb-4 h-10">Explora um caminho de cada vez, testando e voltando em becos sem saída.</p>
+                    <h3 className="text-lg font-bold mb-2 text-quantum-primary">{t('quantumMaze.classicalComputer')}</h3>
+                    <p className="text-xs text-gray-400 mb-4 h-10">{t('quantumMaze.classicalDescription')}</p>
                     <MazeGrid state={classicalState} config={config} />
                      {classicalSolution && (
                         <div className="mt-4 text-sm text-gray-300 bg-gray-900/50 p-2 rounded-lg">
-                            <p>Tempo: <span className="font-bold text-white">{classicalStats.time} ms</span></p>
-                            <p>Distância: <span className="font-bold text-white">{classicalStats.distance} quadrados</span></p>
+                            <p>{t('quantumMaze.time')}: <span className="font-bold text-white">{classicalStats.time} {t('quantumMaze.ms')}</span></p>
+                            <p>{t('quantumMaze.distance')}: <span className="font-bold text-white">{classicalStats.distance} {t('quantumMaze.squares')}</span></p>
                         </div>
                     )}
                 </div>
                 <div className="text-center">
-                    <h3 className="text-lg font-bold mb-2 text-quantum-accent">Computador Quântico</h3>
-                    <p className="text-xs text-gray-400 mb-4 h-10">Graças à superposição, explora todos os caminhos simultaneamente para encontrar a solução.</p>
+                    <h3 className="text-lg font-bold mb-2 text-quantum-accent">{t('quantumMaze.quantumComputer')}</h3>
+                    <p className="text-xs text-gray-400 mb-4 h-10">{t('quantumMaze.quantumDescription')}</p>
                     <MazeGrid state={quantumState} config={config} />
                     {quantumSolution && (
                         <div className="mt-4 text-sm text-gray-300 bg-gray-900/50 p-2 rounded-lg">
-                            <p>Tempo: <span className="font-bold text-white">{quantumStats.time} ms</span></p>
-                            <p>Distância: <span className="font-bold text-white">{quantumStats.distance} quadrados</span></p>
+                            <p>{t('quantumMaze.time')}: <span className="font-bold text-white">{quantumStats.time} {t('quantumMaze.ms')}</span></p>
+                            <p>{t('quantumMaze.distance')}: <span className="font-bold text-white">{quantumStats.distance} {t('quantumMaze.squares')}</span></p>
                         </div>
                     )}
                 </div>
             </div>
             <div className="mt-8 flex flex-wrap justify-center gap-4">
                 <button onClick={startSolving} disabled={isSolving} className="bg-quantum-accent hover:bg-cyan-500 text-white font-bold py-2 px-6 rounded-full transition-all disabled:bg-gray-500">
-                    {isSolving ? 'Resolvendo...' : 'Resolver Labirinto'}
+                    {isSolving ? t('quantumMaze.solving') : t('quantumMaze.solveMaze')}
                 </button>
                 <button onClick={reset} className="bg-gray-600 hover:bg-gray-500 text-white font-bold py-2 px-6 rounded-full transition-all">
-                    Resetar
+                    {t('quantumMaze.reset')}
                 </button>
                 <button onClick={toggleMazeSize} className="bg-quantum-secondary hover:bg-indigo-400 text-white font-bold py-2 px-6 rounded-full transition-all">
-                    {mazeSize === 'small' ? 'Aumentar Labirinto' : 'Diminuir Labirinto'}
+                    {mazeSize === 'small' ? t('quantumMaze.enlargeMaze') : t('quantumMaze.shrinkMaze')}
                 </button>
             </div>
         </div>

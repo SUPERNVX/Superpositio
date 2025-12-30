@@ -1,7 +1,10 @@
 
 import React from 'react';
+import { useTranslation, Trans } from 'react-i18next';
 
 const SchrodingerModelSection: React.FC = () => {
+    const { t } = useTranslation();
+
     return (
         <section id="modelo" data-observe className="py-20 bg-gradient-to-r from-gray-800 to-quantum-dark opacity-0 translate-y-10 transition-all">
             <style>{`
@@ -21,8 +24,10 @@ const SchrodingerModelSection: React.FC = () => {
             `}</style>
             <div className="container mx-auto px-4">
                 <div className="text-center mb-16">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">O Modelo Atômico de <a href="https://supernvx.github.io/Atomus/#/schrodinger" target="_blank" className="text-quantum-accent hover:underline">Schrödinger</a></h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto">Abandonando órbitas fixas por um mar de possibilidades.</p>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                        <Trans i18nKey="schrodingerSection.title" components={{ 0: <a href="https://supernvx.github.io/Atomus/#/schrodinger" target="_blank" className="text-quantum-accent hover:underline">Schrödinger</a> }} />
+                    </h2>
+                    <p className="text-gray-400 max-w-2xl mx-auto">{t('schrodingerSection.description')}</p>
                     <div className="w-20 h-1 bg-quantum-accent mx-auto mt-4"></div>
                 </div>
 
@@ -58,14 +63,14 @@ const SchrodingerModelSection: React.FC = () => {
 
                     <div>
                         <div className="bg-gray-800 rounded-2xl p-8 border border-quantum-accent/20">
-                            <h3 className="text-2xl font-bold mb-6 text-quantum-accent">A Nuvem de Probabilidades</h3>
+                            <h3 className="text-2xl font-bold mb-6 text-quantum-accent">{t('schrodingerSection.cloud.title')}</h3>
                             <p className="text-gray-300 mb-4">
-                                Diferente do modelo de Bohr com órbitas definidas, o modelo de Schrödinger descreve o elétron como uma "nuvem". Esta nuvem não representa o elétron espalhado, mas sim a **probabilidade** de encontrá-lo em qualquer ponto ao redor do núcleo.
+                                {t('schrodingerSection.cloud.description')}
                             </p>
                             <ul className="space-y-3 text-gray-400">
-                                <li className="flex items-start"><i className="fas fa-check-circle text-quantum-accent mt-1 mr-3"></i> Onde a nuvem é mais densa, a probabilidade de encontrar o elétron é maior.</li>
-                                <li className="flex items-start"><i className="fas fa-check-circle text-quantum-accent mt-1 mr-3"></i> O Princípio da Incerteza de Heisenberg afirma que não podemos saber simultaneamente a posição exata e o momento do elétron.</li>
-                                <li className="flex items-start"><i className="fas fa-check-circle text-quantum-accent mt-1 mr-3"></i> O ato de medir "força" o elétron a assumir uma posição, colapsando a nuvem de probabilidade.</li>
+                                <li className="flex items-start"><i className="fas fa-check-circle text-quantum-accent mt-1 mr-3"></i> {t('schrodingerSection.cloud.density')}</li>
+                                <li className="flex items-start"><i className="fas fa-check-circle text-quantum-accent mt-1 mr-3"></i> {t('schrodingerSection.cloud.uncertainty')}</li>
+                                <li className="flex items-start"><i className="fas fa-check-circle text-quantum-accent mt-1 mr-3"></i> {t('schrodingerSection.cloud.measurement')}</li>
                             </ul>
                         </div>
                     </div>

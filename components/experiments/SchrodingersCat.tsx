@@ -1,9 +1,26 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, useMemo } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const SchrodingersCat: React.FC = () => {
+    const { t, i18n } = useTranslation();
     const [state, setState] = useState<'idle' | 'observing' | 'alive' | 'dead'>('idle');
-    const [resultText, setResultText] = useState<'Vivo E Morto' | 'Vivo!' | 'Morto...'>('Vivo E Morto');
     const [resultIcon, setResultIcon] = useState<string>('fa-cat text-green-400');
+
+    // Use useMemo to get the correct text based on current state and language
+    const resultText = useMemo(() => {
+        switch (state) {
+            case 'idle':
+                return t('schrodingersCat.initialState');
+            case 'observing':
+                return t('schrodingersCat.observing');
+            case 'alive':
+                return t('schrodingersCat.alive');
+            case 'dead':
+                return t('schrodingersCat.dead');
+            default:
+                return t('schrodingersCat.initialState');
+        }
+    }, [state, t, i18n.language]);
 
     // 3D Rotation State
     const [rotation, setRotation] = useState({ x: -20, y: 30 });
@@ -13,16 +30,13 @@ const SchrodingersCat: React.FC = () => {
     const observe = () => {
         if (state !== 'idle') return;
         setState('observing');
-        setResultText('...' as any);
 
         setTimeout(() => {
             if (Math.random() < 0.5) {
                 setState('alive');
-                setResultText('Vivo!');
                 setResultIcon('fa-cat text-green-400');
             } else {
                 setState('dead');
-                setResultText('Morto...');
                 setResultIcon('fa-skull-crossbones text-red-400');
             }
         }, 1500);
@@ -30,9 +44,8 @@ const SchrodingersCat: React.FC = () => {
 
     const reset = () => {
         setState('idle');
-        setResultText('Vivo E Morto');
     };
-    
+
     // --- 3D Drag Logic ---
     const handleMouseDown = (e: React.MouseEvent) => {
         if (e.button !== 0) return;
@@ -112,7 +125,7 @@ const SchrodingersCat: React.FC = () => {
                 .front, .back { width: var(--box-w); height: var(--box-h); }
                 .left, .right { width: var(--box-d); height: var(--box-h); left: calc( (var(--box-w) - var(--box-d)) / 2 ); }
                 .top, .bottom { width: var(--box-w); height: var(--box-d); top: calc( (var(--box-h) - var(--box-d)) / 2 ); }
-                
+
                 /* Closed State Transforms */
                 .closed .front  { transform: translateZ(calc(var(--box-d) / 2)); }
                 .closed .back   { transform: rotateY(180deg) translateZ(calc(var(--box-d) / 2)); }
@@ -128,7 +141,7 @@ const SchrodingersCat: React.FC = () => {
                 .open .left   { transform: rotateY(-90deg) translateZ(calc(var(--box-w) / 2)); }
                 .open .right  { transform: rotateY(90deg) translateZ(calc(var(--box-w) / 2)); }
                 .open .bottom { transform: rotateX(-90deg) translateZ(calc(var(--box-h) / 2)); }
-                
+
                 /* Styling & Details */
                 .box-face {
                     box-shadow: inset 0 0 20px rgba(0,0,0,0.5);
@@ -149,8 +162,8 @@ const SchrodingersCat: React.FC = () => {
                 .scene-wrapper.pulsing { animation: pulse-glow 3s infinite ease-in-out; }
                 .experiment-detail { position: absolute; text-align: center; color: #9ca3af; }
             `}</style>
-            <h3 className="text-xl font-bold mb-1">Estado do Gato: <span className="text-purple-400">{resultText}</span></h3>
-            <p className="text-xs text-gray-400 mb-2">Arraste a caixa para girar.</p>
+            <h3 className="text-xl font-bold mb-1">{t('schrodingersCat.status')}: <span className="text-purple-400">{resultText}</span></h3>
+            <p className="text-xs text-gray-400 mb-2">{t('schrodingersCat.instruction')}</p>
 
             <div className="h-80 w-full flex items-center justify-center">
                 <div className={`scene-wrapper rounded-full ${state === 'idle' ? 'pulsing' : ''}`}>
@@ -175,15 +188,15 @@ const SchrodingersCat: React.FC = () => {
                                 >
                                     <div className="experiment-detail" style={{top: '10px', right: '10px'}}>
                                         <i className="fas fa-radiation text-xl text-yellow-300"></i>
-                                        <p className="text-[8px]">Átomo</p>
+                                        <p className="text-[8px]">{t('schrodingersCat.atom')}</p>
                                     </div>
                                      <div className="experiment-detail" style={{top: '10px', left: '10px'}}>
                                         <i className="fas fa-vial text-xl text-red-400"></i>
-                                        <p className="text-[8px]">Veneno</p>
+                                        <p className="text-[8px]">{t('schrodingersCat.poison')}</p>
                                     </div>
                                     <div className="experiment-detail" style={{bottom: '10px', left: '0px', right: '0px' }}>
                                         <i className="fas fa-hammer text-xl text-gray-400"></i>
-                                        <p className="text-[8px]">Mecanismo</p>
+                                        <p className="text-[8px]">{t('schrodingersCat.mechanism')}</p>
                                     </div>
                                     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                         <i className={`fas ${resultIcon} text-6xl`}></i>
@@ -201,14 +214,14 @@ const SchrodingersCat: React.FC = () => {
                     disabled={state !== 'idle'}
                     className="bg-quantum-primary hover:bg-quantum-secondary text-white font-bold py-2 px-6 rounded-full transition-all duration-300 disabled:bg-gray-600 disabled:cursor-not-allowed"
                 >
-                    <i className="fas fa-eye mr-2"></i> Observar
+                    <i className="fas fa-eye mr-2"></i> {t('schrodingersCat.observe')}
                 </button>
                 <button
                     onClick={reset}
                     disabled={state === 'observing'}
                     className="bg-gray-600 hover:bg-gray-500 text-white font-bold py-2 px-6 rounded-full transition-all duration-300 disabled:opacity-50"
                 >
-                    Resetar
+                    {t('schrodingersCat.reset')}
                 </button>
             </div>
         </div>

@@ -10,8 +10,11 @@
   },
   "dependencies": {
     "@types/three": "^0.180.0",
+    "i18next": "^23.10.1",
+    "i18next-browser-languagedetector": "^7.2.1",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
+    "react-i18next": "^14.1.0",
     "three": "^0.180.0"
   },
   "devDependencies": {

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { useTranslation } from 'react-i18next';
 
 interface Hit {
   id: number;
@@ -40,7 +41,7 @@ const WaveAnimation: React.FC = () => {
                         opacity: 0;
                     }
                 }
-                
+
                 @keyframes propagate-secondary {
                      0% {
                         r: 0;
@@ -51,7 +52,7 @@ const WaveAnimation: React.FC = () => {
                         opacity: 0;
                     }
                 }
-                
+
                 @keyframes plane-wave {
                     0% {
                         opacity: 0;
@@ -72,12 +73,12 @@ const WaveAnimation: React.FC = () => {
                 .secondary-wave {
                     animation: propagate-secondary 2s linear infinite;
                 }
-                
+
                 .wave-line {
                     stroke-dasharray: 2, 4;
                 }
             `}</style>
-            
+
             {/* Primary plane waves approaching the slits */}
             {Array.from({ length: 15 }).map((_, i) => (
                 <line
@@ -110,7 +111,7 @@ const WaveAnimation: React.FC = () => {
                         style={{ animationDelay: `${0.25 + i * 0.4}s` }}
                     />
                 ))}
-                
+
                 {/* Wavelets from bottom slit */}
                 {Array.from({ length: waveCount }).map((_, i) => (
                     <circle
@@ -139,6 +140,7 @@ const ParticleAnimation: React.FC = () => (
 
 
 const DoubleSlitExperiment: React.FC = () => {
+    const { t } = useTranslation();
     const [isObserved, setIsObserved] = useState<boolean>(false);
     const [isRunning, setIsRunning] = useState<boolean>(false);
     const [hits, setHits] = useState<Hit[]>([]);
@@ -148,7 +150,7 @@ const DoubleSlitExperiment: React.FC = () => {
         rand = pRNG(3); // Reset seed
         setHits([]);
     };
-    
+
     useEffect(() => {
         if (isRunning) {
             resetSimulation();
@@ -159,7 +161,7 @@ const DoubleSlitExperiment: React.FC = () => {
                         setIsRunning(false);
                         return prevHits;
                     }
-                    
+
                     const screenWidth = 100;
                     const slit1 = screenWidth * 0.4;
                     const slit2 = screenWidth * 0.6;
@@ -173,7 +175,7 @@ const DoubleSlitExperiment: React.FC = () => {
                     } else {
                         // Wave behavior: Interference pattern
                         const interferencePattern = (pos: number) => Math.cos( (pos - screenWidth / 2) * 0.5 ) ** 2;
-                        
+
                         let p, x;
                         do {
                            x = rand() * screenWidth;
@@ -246,7 +248,7 @@ const DoubleSlitExperiment: React.FC = () => {
                 <div className="flex-grow h-64 md:h-80 relative flex items-center">
                     {/* Emitter */}
                     <div className="absolute left-0 top-1/2 -translate-y-1/2 w-2 h-10 bg-quantum-primary rounded-r-full z-10"></div>
-                    
+
                     {/* Slit Plate */}
                     <div className="absolute left-[20%] top-0 h-full w-2 bg-gray-500 rounded-full z-10">
                         <div className="absolute top-[35%] h-[10%] w-full bg-gray-900/50"></div>
@@ -256,9 +258,9 @@ const DoubleSlitExperiment: React.FC = () => {
                     {/* ANIMATION OVERLAY */}
                     {isRunning && !isObserved && <WaveAnimation />}
                     {isRunning && isObserved && <ParticleAnimation />}
-                    
+
                     {/* Observer Eye */}
-                    <i 
+                    <i
                        className={`fas fa-eye absolute left-[20%] top-[20%] text-2xl text-quantum-accent transition-opacity duration-500 z-10 ${isObserved ? 'opacity-100' : 'opacity-0'}`}
                        style={{ transform: 'translateX(20px)'}}
                     ></i>
@@ -273,9 +275,9 @@ const DoubleSlitExperiment: React.FC = () => {
 
                 {/* Controls & Explanation */}
                 <div className="w-full md:w-64 flex-shrink-0 p-4 bg-gray-800 rounded-lg">
-                    <h4 className="font-bold text-lg mb-2">Controles</h4>
+                    <h4 className="font-bold text-lg mb-2">{t('common.controls')}</h4>
                     <div className="flex items-center justify-between mb-4">
-                        <span className="text-gray-300">Observador</span>
+                        <span className="text-gray-300">{t('doubleSlitExperiment.observer')}</span>
                         <label className="relative inline-flex items-center cursor-pointer">
                             <input type="checkbox" checked={isObserved} onChange={() => setIsObserved(!isObserved)} className="sr-only peer" />
                             <div className="w-11 h-6 bg-gray-600 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-quantum-primary"></div>
@@ -283,19 +285,19 @@ const DoubleSlitExperiment: React.FC = () => {
                     </div>
                     <div className="flex gap-2">
                         <button onClick={() => setIsRunning(true)} disabled={isRunning} className="w-full bg-quantum-accent hover:bg-cyan-500 text-white font-bold py-2 px-4 rounded-full transition-all disabled:bg-gray-500">
-                           {isRunning ? 'Rodando...' : 'Iniciar'}
+                           {isRunning ? t('common.running') : t('common.start')}
                         </button>
                         <button onClick={() => { setIsRunning(false); resetSimulation(); }} className="w-full bg-quantum-secondary hover:bg-indigo-400 text-white font-bold py-2 px-4 rounded-full transition-all">
-                            Resetar
+                            {t('common.reset')}
                         </button>
                     </div>
                     <hr className="my-4 border-gray-600"/>
                     <div className="text-sm">
-                        <h5 className={`font-bold transition-colors ${!isObserved ? 'text-quantum-accent' : 'text-gray-500'}`}>Comportamento Ondulatório</h5>
-                        <p className={`text-xs transition-colors mb-2 ${!isObserved ? 'text-gray-300' : 'text-gray-500'}`}>Sem observador, os elétrons criam um padrão de interferência, agindo como ondas.</p>
-                        
-                        <h5 className={`font-bold transition-colors ${isObserved ? 'text-quantum-primary' : 'text-gray-500'}`}>Comportamento Particulado</h5>
-                        <p className={`text-xs transition-colors ${isObserved ? 'text-gray-300' : 'text-gray-500'}`}>Com um observador, o padrão some. Os elétrons agem como partículas, formando duas linhas.</p>
+                        <h5 className={`font-bold transition-colors ${!isObserved ? 'text-quantum-accent' : 'text-gray-500'}`}>{t('doubleSlitExperiment.waveBehavior')}</h5>
+                        <p className={`text-xs transition-colors mb-2 ${!isObserved ? 'text-gray-300' : 'text-gray-500'}`}>{t('doubleSlitExperiment.waveExplanation')}</p>
+
+                        <h5 className={`font-bold transition-colors ${isObserved ? 'text-quantum-primary' : 'text-gray-500'}`}>{t('doubleSlitExperiment.particleBehavior')}</h5>
+                        <p className={`text-xs transition-colors ${isObserved ? 'text-gray-300' : 'text-gray-500'}`}>{t('doubleSlitExperiment.particleExplanation')}</p>
                     </div>
                 </div>
             </div>

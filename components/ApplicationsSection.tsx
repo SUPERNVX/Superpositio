@@ -1,18 +1,20 @@
 import React, { useState } from 'react';
+import { useTranslation, Trans } from 'react-i18next';
 import QuantumMaze from './applications/QuantumMaze';
 import SemiconductorTransistor from './applications/SemiconductorTransistor';
 import QuantumTunnelingBattery from './applications/QuantumTunnelingBattery';
 
 type Application = 'quantum-computing' | 'semiconductors' | 'batteries';
 
-const applications: { id: Application; name: string; icon: string }[] = [
-    { id: 'quantum-computing', name: 'Computação Quântica', icon: 'fa-laptop-code' },
-    { id: 'semiconductors', name: 'Semicondutores', icon: 'fa-microchip' },
-    { id: 'batteries', name: 'Baterias de Lítio', icon: 'fa-battery-full' },
-];
-
 const ApplicationsSection: React.FC = () => {
+    const { t } = useTranslation();
     const [activeApp, setActiveApp] = useState<Application>('quantum-computing');
+
+    const applications: { id: Application; name: string; icon: string }[] = [
+        { id: 'quantum-computing', name: t('applicationsSection.quantumComputing'), icon: 'fa-laptop-code' },
+        { id: 'semiconductors', name: t('applicationsSection.semiconductors'), icon: 'fa-microchip' },
+        { id: 'batteries', name: t('applicationsSection.batteries'), icon: 'fa-battery-full' },
+    ];
 
     const renderActiveComponent = () => {
         switch (activeApp) {
@@ -31,11 +33,13 @@ const ApplicationsSection: React.FC = () => {
         <section id="aplicacoes" data-observe className="py-20 bg-gradient-to-r from-gray-800 to-quantum-dark opacity-0 translate-y-10 transition-all">
             <div className="container mx-auto px-4">
                 <div className="text-center mb-12">
-                    <h2 className="text-3xl md:text-4xl font-bold mb-4">Aplicações da <span className="text-quantum-accent">Superposição</span></h2>
-                    <p className="text-gray-400 max-w-2xl mx-auto">Tecnologias que exploram as propriedades quânticas da matéria. Clique para interagir.</p>
+                    <h2 className="text-3xl md:text-4xl font-bold mb-4">
+                        <Trans i18nKey="sections.applications.title" components={{ 0: <span className="text-quantum-accent">Superposição</span> }} />
+                    </h2>
+                    <p className="text-gray-400 max-w-2xl mx-auto">{t('applicationsSection.description')}</p>
                     <div className="w-20 h-1 bg-quantum-accent mx-auto mt-4"></div>
                 </div>
-                
+
                 <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-8">
                     {applications.map(app => (
                         <button

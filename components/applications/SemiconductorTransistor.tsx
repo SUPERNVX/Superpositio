@@ -1,7 +1,9 @@
 
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const SemiconductorTransistor: React.FC = () => {
+    const { t } = useTranslation();
     const [isGateOn, setIsGateOn] = useState(false);
     const electronCount = 10;
 
@@ -50,9 +52,9 @@ const SemiconductorTransistor: React.FC = () => {
                     opacity: 0;
                 }
             `}</style>
-            <h3 className="text-lg font-bold mb-2 text-quantum-primary">Transistor Semicondutor</h3>
+            <h3 className="text-lg font-bold mb-2 text-quantum-primary">{t('semiconductorTransistor.title')}</h3>
             <p className="text-sm text-gray-400 mb-4 max-w-xl">
-                O comportamento quântico dos elétrons em materiais semicondutores permite controlar seu fluxo com precisão, criando um interruptor (transistor) que é a base de todos os eletrônicos.
+                {t('semiconductorTransistor.description')}
             </p>
 
             <div className="w-full max-w-lg h-32 bg-gray-800 rounded-lg my-4 p-4 flex items-center relative border-2 border-gray-700 overflow-hidden">
@@ -98,7 +100,7 @@ const SemiconductorTransistor: React.FC = () => {
             </div>
 
             <div className="flex items-center gap-4">
-                <span className={`font-bold transition-colors ${isGateOn ? 'text-quantum-primary' : 'text-red-400'}`}>{isGateOn ? 'Ligado (Fluxo Permitido)' : 'Desligado (Fluxo Bloqueado)'}</span>
+                <span className={`font-bold transition-colors ${isGateOn ? 'text-quantum-primary' : 'text-red-400'}`}>{isGateOn ? t('semiconductorTransistor.on') : t('semiconductorTransistor.off')}</span>
                 <label className="relative inline-flex items-center cursor-pointer">
                     <input type="checkbox" checked={isGateOn} onChange={() => setIsGateOn(!isGateOn)} className="sr-only peer" />
                     <div className="w-11 h-6 bg-gray-600 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-quantum-primary"></div>

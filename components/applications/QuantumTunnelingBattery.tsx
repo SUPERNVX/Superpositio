@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 
 const QuantumTunnelingBattery: React.FC = () => {
+    const { t } = useTranslation();
     const [view, setView] = useState<'classical' | 'quantum'>('classical');
     const ionCount = 8;
     
@@ -31,15 +33,15 @@ const QuantumTunnelingBattery: React.FC = () => {
                     animation: tunnel-refined 4s ease-in-out infinite;
                 }
             `}</style>
-            <h3 className="text-lg font-bold mb-2 text-green-400">Tunelamento Quântico em Baterias</h3>
+            <h3 className="text-lg font-bold mb-2 text-green-400">{t('quantumTunnelingBattery.title')}</h3>
             <p className="text-sm text-gray-400 mb-4 max-w-xl">
-               Na física clássica, um elétron não pode passar por uma barreira de energia sem ter energia suficiente. Quanticanete, devido à sua natureza de onda, existe uma probabilidade de ele "tunelar" através da barreira.
+               {t('quantumTunnelingBattery.description')}
             </p>
 
             <div className="w-full max-w-lg h-40 bg-gray-800 rounded-lg my-4 flex items-center justify-between p-4 relative border-2 border-gray-700">
                 {/* Anode */}
                 <div className="w-1/3 h-full relative">
-                    <h4 className="absolute top-0 left-0 text-xs font-bold">ÂNODO (-)</h4>
+                    <h4 className="absolute top-0 left-0 text-xs font-bold">{t('quantumTunnelingBattery.anode')}</h4>
                     {Array.from({ length: ionCount }).map((_, i) => {
                         // Calculate position with small offset to avoid vertical stacking
                         const verticalOffset = (i % 2 === 0 ? -5 : 5); // Slightly offset even/odd ions
@@ -58,12 +60,12 @@ const QuantumTunnelingBattery: React.FC = () => {
                 
                 {/* Barrier */}
                 <div className="w-2 h-full bg-gray-600 shadow-lg relative">
-                    <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-xs font-bold whitespace-nowrap">Barreira (Eletrólito)</span>
+                    <span className="absolute -top-5 left-1/2 -translate-x-1/2 text-xs font-bold whitespace-nowrap">{t('quantumTunnelingBattery.barrier')}</span>
                 </div>
                 
                 {/* Cathode */}
                 <div className="w-1/3 h-full relative">
-                    <h4 className="absolute top-0 right-0 text-xs font-bold">CÁTODO (+)</h4>
+                    <h4 className="absolute top-0 right-0 text-xs font-bold">{t('quantumTunnelingBattery.cathode')}</h4>
                 </div>
             </div>
 
@@ -72,13 +74,13 @@ const QuantumTunnelingBattery: React.FC = () => {
                     onClick={() => setView('classical')}
                     className={`px-4 py-2 font-bold rounded-full transition-all ${view === 'classical' ? 'bg-blue-500 text-white' : 'bg-gray-600'}`}
                 >
-                    Visão Clássica
+                    {t('quantumTunnelingBattery.classicalView')}
                 </button>
                 <button 
                     onClick={() => setView('quantum')}
                     className={`px-4 py-2 font-bold rounded-full transition-all ${view === 'quantum' ? 'bg-green-500 text-white' : 'bg-gray-600'}`}
                 >
-                    Visão Quântica
+                    {t('quantumTunnelingBattery.quantumView')}
                 </button>
             </div>
         </div>
